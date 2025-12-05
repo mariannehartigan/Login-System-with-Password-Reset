@@ -18,12 +18,17 @@ use App\Http\Controllers\SignedInPageController;
 Route::get('/', [HomeController::class, 'index']);
 
 /* if don't use private pages don't need ->name('login') */
-Route::get('login', [AuthController::class, 'create'])->name('login');
-Route::post('login', [AuthController::class, 'store']);
+Route::get('login', [AuthController::class, 'create'])
+    ->middleware('guest')
+    ->name('login');
+Route::post('login', [AuthController::class, 'store'])
+    ->middleware('guest');
 Route::delete('logout', [AuthController::class, 'destroy']);
 
-Route::get('register', [RegistrationController::class, 'create']);
-Route::post('register', [RegistrationController::class, 'store']);
+Route::get('register', [RegistrationController::class, 'create'])
+    ->middleware('guest');
+Route::post('register', [RegistrationController::class, 'store'])
+    ->middleware('guest');
 
 
 Route::get('forgotpassword', [PasswordResetLinkController::class, 'create'])

@@ -15,7 +15,7 @@ class CustomResetPassword extends ResetPassword
         ], false));
 
         return (new MailMessage)
-            ->subject('Reset Your Password')
+            ->subject('QuickWebsites Password Reset')
             ->markdown('emails.custom-reset', [
                 'name' => $notifiable->name,
                 'resetUrl' => $url,

@@ -1,3 +1,149 @@
+<template>
+  <form @submit.prevent="submit">
+    <h2>Reset Password</h2>
+
+    <!-- Email -->
+    <input
+      v-model="form.email"
+      type="email"
+      class="input"
+      autocomplete="email"
+      placeholder="Email"
+    />
+    <div v-if="form.errors.email" class="input-error">
+      {{ form.errors.email }}
+    </div>
+
+    <!-- Password -->
+    <div class="password-wrapper">
+      <input
+        :type="showPassword ? 'text' : 'password'"
+        v-model="form.password"
+        class="input"
+        autocomplete="new-password"
+        placeholder="New Password"
+      />
+
+      <!-- Eye Icon Toggle -->
+      <button
+        type="button"
+        class="toggle-password"
+        @click="showPassword = !showPassword"
+      >
+        <!-- Eye Open -->
+        <svg
+          v-if="!showPassword"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          class="icon"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-1.274 4.057-5.065 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+        </svg>
+
+        <!-- Eye Closed -->
+        <svg
+          v-else
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          class="icon"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M13.875 18.825A10.05 10.05 0 0112 19c-4.477 0-8.268-2.943-9.542-7a9.97 9.97 0 012.374-4.568m3.181-2.475A9.956 9.956 0 0112 5c4.477 0 8.268 2.943 9.542 7a9.98 9.98 0 01-4.043 5.166M9.878 9.878A3 3 0 0114.12 14.12M3 3l18 18" />
+        </svg>
+      </button>
+    </div>
+
+    <div v-if="form.errors.password" class="input-error">
+      {{ form.errors.password }}
+    </div>
+
+    <button type="submit" class="submit-btn">
+      Reset Password
+    </button>
+  </form>
+</template>
+
+<script setup>
+import { ref } from 'vue'
+import { useForm } from '@inertiajs/vue3'
+
+const props = defineProps({
+  token: String,
+  email: String,
+})
+
+const showPassword = ref(false)
+
+const form = useForm({
+  token: props.token,
+  email: props.email,
+  password: '',
+})
+
+function submit() {
+  form.post('/resetpassword')
+}
+</script>
+
+<style scoped>
+form {
+  padding: 5vw;
+}
+
+.input {
+  width: 100%;
+  border-bottom: 1px solid black !important;
+  padding: 0.5rem 0;
+  margin-bottom: 1rem;
+  outline: none;
+}
+
+.password-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.toggle-password {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 4px;
+  margin-left: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+.submit-btn {
+  border: 1px solid black !important;
+  padding: 0.4rem 1rem;
+  background: white;
+  cursor: pointer;
+}
+
+.input-error {
+  color: red;
+  font-size: 0.85rem;
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+}
+</style>
+
+
+
+
+
 <!-- <template>
     <div class="min-h-screen flex items-center justify-center bg-gray-100 px-4">
         <div class="bg-white p-8 rounded-xl shadow-lg w-full max-w-md">
@@ -78,7 +224,7 @@ function resetPassword() {
 }
 </script> -->
 
-<template>
+<!-- <template>
   <form @submit.prevent="submit">
     <h2>Reset Password</h2>
 
@@ -110,4 +256,4 @@ const form = useForm({
 function submit() {
   form.post('/resetpassword')
 }
-</script>
+</script> -->

@@ -13,16 +13,19 @@ class PasswordResetLinkController extends Controller
         return inertia('Auth/ForgotPassword');
     }
 
-    public function store(Request $request)
-    {
-        $request->validate([
-            'email' => ['required', 'email'],
-        ]);
+public function store(Request $request)
+{
+    $request->validate([
+        'email' => ['required', 'email'],
+    ]);
 
-        $status = Password::sendResetLink(
-            $request->only('email')
-        );
+    $status = Password::sendResetLink(
+        $request->only('email')
+    );
 
-        return back()->with('status', __($status));
-    }
+    return inertia('Auth/PasswordResetLinkSent', [
+        // 'status' => __($status),
+        'email' => $request->email,
+    ]);
+}
 }

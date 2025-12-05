@@ -79,7 +79,7 @@ const props = defineProps({
   email: String,
 })
 
-const showPassword = ref(false)
+const showPassword = ref(true)
 
 const form = useForm({
   token: props.token,

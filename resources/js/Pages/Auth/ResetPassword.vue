@@ -13,6 +13,7 @@
     <div v-if="form.errors.email" class="input-error">
       {{ form.errors.email }}
     </div>
+    <p>Your password will be shown by default</p>
 
     <!-- Password -->
     <div class="password-wrapper">

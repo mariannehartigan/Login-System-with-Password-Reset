@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="authContainer">
     <form @submit.prevent="submit">
 
       <p>If an account exists for <strong>{{ email }}</strong>, a reset link has been sent.</p>

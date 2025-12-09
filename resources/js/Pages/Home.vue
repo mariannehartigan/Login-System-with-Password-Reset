@@ -1,12 +1,22 @@
 <template>
   <div class="container">
     <div v-if="user">
-      <div>{{ user.name }}</div>
-      <Link href="/logout" method="delete" as="button">Logout</Link>
+      <div class="right">
+        Welcome, {{ user.name }}
+        &nbsp;
+        <button class="button">
+          <Link href="/logout" method="delete" as="button">Logout</Link>
+        </button>
+      </div>
     </div>
     <div v-else>
-      <Link href="/register">Register</Link>
-      <Link href="/login">Sign-In</Link>
+      <div class="center">
+        <button class="button"><Link href="/login">Sign-In</Link></button>
+        &nbsp;
+        <button class="button"><Link href="/register">Register</Link></button>
+
+
+      </div>
     </div>
     <br />
     <Item v-if="user"/>
@@ -23,9 +33,3 @@ const user = computed(
   () => page.props.user,
 )
 </script>
-
-<style scoped>
-.container {
-  padding: 3vw;
-}
-</style>

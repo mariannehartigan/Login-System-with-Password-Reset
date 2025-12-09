@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="authContainer">
     <form @submit.prevent="submit">
       <p class="title">Reset Password</p>
       <!-- Email -->

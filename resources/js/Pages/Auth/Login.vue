@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="authContainer">
     <form @submit.prevent="login">
       
     <p class="title">Sign In</p>
@@ -22,10 +22,13 @@
         <Link href="/forgotpassword">Forgot password?</Link>
       </div>
 
-      <div class="center">
-      <button type="submit" class="button">
-        Log In
-      </button>
+      <div class="buttonContainer">
+        <button type="submit" class="button">
+          Log In
+        </button>
+        <span class="changeToLoginOrRegister">
+          <Link href="/register">Register</Link>
+        </span>
       </div>
 
     </form>

@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="authContainer">
     <form @submit.prevent="register">
       <p class="title">Register</p>
       <div>
@@ -38,10 +38,13 @@
         </div>
       </div>
 
-      <div class="center">
+      <div class="buttonContainer">
         <button type="submit" class="button">
           Create Account
         </button>
+        <span class="changeToLoginOrRegister">
+          <Link href="/login">Sign-In</Link>
+        </span>
       </div>
     </form>
   </div>
@@ -49,7 +52,7 @@
 
 <script setup>
 import { ref } from 'vue'
-import { useForm } from '@inertiajs/vue3'
+import { Link, useForm } from '@inertiajs/vue3'
 import PasswordEye from './PasswordEye.vue'
 
 const form = useForm({

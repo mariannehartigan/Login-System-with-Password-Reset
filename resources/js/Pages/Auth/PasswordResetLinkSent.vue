@@ -1,11 +1,16 @@
 <template>
-  <div>
-    <p>If an account exists for <strong>{{ email }}</strong>, a reset link has been sent.</p>
-    <p>Please check your email and follow the instructions to reset your password.</p>
-    <p>Didn't get an email?</p>
-
+  <div class="container">
     <form @submit.prevent="submit">
-      <button type="submit">Resend Link</button>
+
+      <p>If an account exists for <strong>{{ email }}</strong>, a reset link has been sent.</p>
+      <br />
+      <p>Please check your email and follow the instructions to reset your password.</p>
+      <br />
+      <br />
+      <p>Didn't get an email?</p>
+          <div class="center">
+      <button type="submit" class="button">Resend Link</button>
+      </div>
     </form>
 
   </div>

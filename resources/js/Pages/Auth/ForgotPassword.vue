@@ -1,26 +1,34 @@
 <template>
-  <form @submit.prevent="submit">
-    <h2>Forgot Password</h2>
+  <div class="container">
+    <form @submit.prevent="submit">
+      
+      <p class="title">Forgot Password</p>
 
-    <input v-model="form.email" type="email" placeholder="Email" />
-    <div v-if="form.errors.email">{{ form.errors.email }}</div>
+      <span class="label">Email:</span>
+      <input v-model="form.email" type="email" />
+      <div v-if="form.errors.email">{{ form.errors.email }}</div>
+      <div class="center">
+      <button type="submit" class="button">Send Reset Link</button>
+      </div>
 
-    <button type="submit">Send Reset Link</button>
-
-    <div v-if="status" class="text-green-600">{{ status }}</div>
-  </form>
+      <div v-if="status" class="text-green-600">{{ status }}</div>
+    </form>
+  </div>
 </template>
 
 <script setup>
 import { useForm } from '@inertiajs/vue3'
 import { computed } from 'vue'
 import { usePage } from '@inertiajs/vue3'
+import { useAuthStore } from '../../Stores/auth'
+
+const auth = useAuthStore()
 
 const page = usePage()
 const status = computed(() => page.props.flash?.status)
 
 const form = useForm({
-  email: '',
+  email: auth.email ?? '',
 })
 
 function submit() {

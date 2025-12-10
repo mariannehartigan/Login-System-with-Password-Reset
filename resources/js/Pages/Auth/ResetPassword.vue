@@ -32,8 +32,8 @@
         {{ form.errors.password }}
       </div>
       <br /><br /><br />
-      <div class="center">
-        <button type="submit" class="button">Reset Password</button>
+      <div class="centerAlign">
+        <button type="submit" class="button" style="margin-top: 3vh;">Reset Password</button>
       </div>
     </form>
   </div>

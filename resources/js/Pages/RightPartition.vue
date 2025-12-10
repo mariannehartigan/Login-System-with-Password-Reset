@@ -1,0 +1,1 @@
+<template>Right Section</template>

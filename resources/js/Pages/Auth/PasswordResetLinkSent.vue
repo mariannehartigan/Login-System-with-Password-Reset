@@ -8,8 +8,8 @@
       <br />
       <br />
       <p>Didn't get an email?</p>
-          <div class="center">
-      <button type="submit" class="button">Resend Link</button>
+          <div class="centerAlign">
+      <button type="submit" class="button" style="margin-top: 3vh;">Resend Link</button>
       </div>
     </form>
 

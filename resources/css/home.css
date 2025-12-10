@@ -1,10 +1,11 @@
 .container {
   position: absolute;
   width: 30vw;
-  padding: 2vw;
+  padding: 0vw;
   left: 35vw; /* (100 - width 30)/2 */
+  background-color: white;
 }
 
-.right {
+.rightAlign {
   text-align: right;
 }

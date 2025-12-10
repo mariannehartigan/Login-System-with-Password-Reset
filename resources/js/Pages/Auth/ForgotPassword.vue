@@ -7,8 +7,8 @@
       <span class="label">Email:</span>
       <input v-model="form.email" type="email" />
       <div v-if="form.errors.email">{{ form.errors.email }}</div>
-      <div class="center">
-      <button type="submit" class="button">Send Reset Link</button>
+      <div class="centerAlign">
+      <button type="submit" class="button" style="margin-top: 3vh;">Send Reset Link</button>
       </div>
 
       <div v-if="status" class="text-green-600">{{ status }}</div>

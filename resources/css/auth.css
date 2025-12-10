@@ -8,8 +8,9 @@ eye icon overall 2vw */
   position: absolute;
   width: 30vw;
   padding: 2vw;
-  left: 35vw; /* (100 - width 30)/2, makes it centred */
+  left: 35vw; /* (100 - width 30)/2, makes it centered */
   top: 7vh;
+  background-color: white;
 }
 
 .title {
@@ -31,7 +32,7 @@ input {
   vertical-align: middle;
 }
 
-.center {
+.centerAlign {
   text-align: center;
 }
 
@@ -49,7 +50,6 @@ input {
 
 .button {
   border: 1px solid black !important;
-  margin-top: 3vh;
   padding: 0.4rem 1rem;
   background: white;
   cursor: pointer;

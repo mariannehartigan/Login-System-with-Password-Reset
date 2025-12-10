@@ -39,7 +39,7 @@
       </div>
 
       <div class="buttonContainer">
-        <button type="submit" class="button">
+        <button type="submit" class="button" style="margin-top: 3vh;">
           Create Account
         </button>
         <span class="changeToLoginOrRegister">

@@ -70,3 +70,5 @@ function submit() {
   margin-bottom: 1rem;
 }
 </style>
+
+<style src="../../../css/auth.css" scoped></style>

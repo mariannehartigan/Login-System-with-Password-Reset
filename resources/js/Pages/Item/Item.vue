@@ -1,5 +1,4 @@
 <template>
-  Items:
   <div v-for="item in items" :key="item.id">
     <input v-model="updateForm[item.id].description" @change="update(item.id)" />
     <input v-model="updateForm[item.id].userId" />

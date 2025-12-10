@@ -63,3 +63,5 @@ const form = useForm({
 const showPassword = ref(false)
 const register = () => form.post('/register')
 </script>
+
+<style src="../../../css/auth.css" scoped></style>

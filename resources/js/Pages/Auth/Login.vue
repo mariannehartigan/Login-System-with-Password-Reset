@@ -53,3 +53,5 @@ watch(() => form.email, (value) => {
 
 const login = () => form.post('/login')
 </script>
+
+<style src="../../../css/auth.css" scoped></style>

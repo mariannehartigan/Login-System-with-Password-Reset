@@ -42,3 +42,5 @@ function submit() {
   form.post('/forgotpassword')
 }
 </script>
+
+<style src="../../../css/auth.css" scoped></style>

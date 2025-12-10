@@ -11,7 +11,7 @@
       <button type="submit" class="button" style="margin-top: 3vh;">Send Reset Link</button>
       </div>
 
-      <div v-if="status" class="text-green-600">{{ status }}</div>
+      <div v-if="status">{{ status }}</div>
     </form>
   </div>
 </template>
@@ -35,3 +35,5 @@ function submit() {
   form.post('/forgotpassword')
 }
 </script>
+
+<style src="../../../css/auth.css" scoped></style>

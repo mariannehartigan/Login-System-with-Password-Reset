@@ -47,3 +47,5 @@ const props = defineProps({
   show: Boolean,
 })
 </script>
+
+<style src="../../../css/auth.css" scoped></style>

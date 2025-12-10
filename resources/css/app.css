@@ -3,6 +3,5 @@
 @import url('home.css');
 
 body {
-  background-image: url('../images/backgroundImage.jpg');
-  background-size: 100vw;
+  background-color: #C1C2B4;
 }

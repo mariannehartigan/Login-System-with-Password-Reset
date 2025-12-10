@@ -16,7 +16,8 @@
   position: absolute;
   height: 4vh;
   width: 100vw;
-  background-color: white;
+  background-color: #C1C2B4;
+  padding: 0.25vh 1vw;
 }
 
 .leftPartition {
@@ -24,24 +25,25 @@
   width: 10vw;
   height: 90vh;
   top: 4vh;
+  background-color: #E8E9DF;
 }
 
 .centerPartition {
   position: absolute;
-  width: 75vw;
+  width: 80vw;
   height: 90vh;
   top: 4vh;
   left: 10vw;
-  background-color: white;
-  opacity: 0.7;
+  background-color: #EFF2E4;
 }
 
 .rightPartition {
   position: absolute;
-  width: 15vw;
+  width: 10vw;
   height: 90vh;
   top: 4vh;
-  left: 85vw;
+  left: 90vw;
+  background-color: #E8E9DF;
 }
 
 .footer {
@@ -49,5 +51,5 @@
   height: 6vh;
   width: 100vw;
   top: 94vh;
-  background-color: white;
+  background-color: #C5C6B8;
 }

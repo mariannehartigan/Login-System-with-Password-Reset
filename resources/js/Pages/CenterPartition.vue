@@ -1,5 +1,5 @@
 <template>Center Section
-
+  <div class="centerPartition">Center Section</div>
   
   <!-- <Item v-if="user"/> -->
 </template>

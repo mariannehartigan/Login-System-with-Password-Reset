@@ -1,11 +1,54 @@
-.container {
+/* .container {
   position: absolute;
   width: 30vw;
   padding: 0vw;
-  left: 35vw; /* (100 - width 30)/2 */
+  left: 35vw; (100 - width 30)/2 
   background-color: white;
 }
+  */
 
 .rightAlign {
   text-align: right;
+}
+
+
+.header {
+  position: absolute;
+  height: 3vh;
+  width: 100vw;
+  background-color: white;
+}
+
+.leftPartition {
+  position: absolute;
+  width: 10vw;
+  height: 90vh;
+  top: 3vh;
+  background-color: white;
+}
+
+.centerPartition {
+  position: absolute;
+  width: 75vw;
+  height: 90vh;
+  top: 3vh;
+  left: 10vw;
+  background-color: pink;
+}
+
+.rightPartition {
+  position: absolute;
+  width: 15vw;
+  height: 90vh;
+  top: 3vh;
+  left: 85vw;
+  background-color: white;
+}
+
+.footer {
+  position: absolute;
+  height: 7vh;
+  width: 100vw;
+  top: 93vh;
+  background-color: white;
 }

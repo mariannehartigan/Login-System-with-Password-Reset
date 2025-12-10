@@ -4,7 +4,6 @@
     <LeftPartition />
     <CenterPartition />
     <RightPartition />
-
     <Footer />
   </div>
 </template>

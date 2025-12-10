@@ -1,1 +1,4 @@
-<template>Left Section</template>
+<template>
+  <div class="leftPartition">Left Section</div>
+
+</template>

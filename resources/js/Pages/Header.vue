@@ -1,5 +1,6 @@
 <template>
-      <div v-if="user">
+  <div class="header">
+    <div v-if="user">
       <div class="rightAlign">
         Welcome, {{ user.name }}
         &nbsp;
@@ -17,7 +18,7 @@
 
       </div>
     </div>
-
+  </div>
 
 </template>
 

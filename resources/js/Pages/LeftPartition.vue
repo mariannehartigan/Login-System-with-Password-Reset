@@ -1,4 +1,6 @@
 <template>
-  <div class="leftPartition">Left Section</div>
+  <div class="leftPartition">
+    
+  </div>
 
 </template>

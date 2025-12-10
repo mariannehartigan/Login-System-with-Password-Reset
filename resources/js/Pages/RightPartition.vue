@@ -1,5 +1,7 @@
 <template>
-  <div class="rightPartition">Right Section</div>
+  <div class="rightPartition">
+    
+  </div>
 
 
 </template>
